@@ -34,3 +34,4 @@ C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86\Release\form1.mp_trck_srch_frm.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86\Release\form1.Properties.Resources.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86\Release\form1.csproj.GenerateResource.Cache
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86\Release\form1.bil_trck_add_frm.resources
