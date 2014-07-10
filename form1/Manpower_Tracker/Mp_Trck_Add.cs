@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace form1
 {
-    public partial class mp_trck_tdd_frm : Form
+    public partial class mp_trck_add_frm : Form
     {
-        public mp_trck_tdd_frm()
+        public mp_trck_add_frm()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace form1
         private void Control_KeyPress(object sender, KeyPressEventArgs e)
         {
             int i = 0, j=1;
-            if (mp_add_dgv.CurrentCell.ColumnIndex == 0)
+            if (mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 0)
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 {
@@ -47,7 +47,7 @@ namespace form1
                 }
             }
 
-            if (mp_add_dgv.CurrentCell.ColumnIndex == 1 || mp_add_dgv.CurrentCell.ColumnIndex == 4)
+            if (mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 1 || mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 4)
             {
                 int ascii = Convert.ToInt16(e.KeyChar);
 
@@ -60,6 +60,11 @@ namespace form1
                     e.Handled = true;
                 }
             }
+        }
+
+        private void mt_add_addRecord_grb_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

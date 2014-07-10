@@ -13,6 +13,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -55,6 +70,17 @@
       <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="connection.cs" />
+    <Compile Include="Intervantion_Tracker\Invt_Trck_Srch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intervantion_Tracker\Invt_Trck_Srch.Designer.cs">
+      <DependentUpon>Invt_Trck_Srch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +92,6 @@
     </Compile>
     <Compile Include="Intervantion_Tracker\Invt_Trck_Add.Designer.cs">
       <DependentUpon>Invt_Trck_Add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Intervantion_Tracker\Invt_Trck_Srch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Intervantion_Tracker\Invt_Trck_Srch.Designer.cs">
-      <DependentUpon>Invt_Trck_Srch.cs</DependentUpon>
     </Compile>
     <Compile Include="Manpower_Tracker\Mp_Trck_Add.cs">
       <SubType>Form</SubType>
@@ -97,14 +117,14 @@
     <EmbeddedResource Include="Billing_Tracker\Bill_Trck_Add.resx">
       <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Intervantion_Tracker\Invt_Trck_Srch.resx">
+      <DependentUpon>Invt_Trck_Srch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Intervantion_Tracker\Invt_Trck_Add.resx">
       <DependentUpon>Invt_Trck_Add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Intervantion_Tracker\Invt_Trck_Srch.resx">
-      <DependentUpon>Invt_Trck_Srch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Window.resx">
       <DependentUpon>Main_Window.cs</DependentUpon>
@@ -117,14 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -175,6 +190,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Delete_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

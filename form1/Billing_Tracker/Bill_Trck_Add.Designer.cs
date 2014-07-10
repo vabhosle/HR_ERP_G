@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.bil_add_grb = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.invt_cldtFr_srch_btn = new System.Windows.Forms.Button();
+            this.bil_senForPro_add_dtp = new System.Windows.Forms.DateTimePicker();
+            this.bil_dtOfBil_add_dtp = new System.Windows.Forms.DateTimePicker();
             this.bil_clr_add_btn = new System.Windows.Forms.Button();
             this.bil_addRec_add_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,15 +51,9 @@
             this.bil_bilAmt_add_txt = new System.Windows.Forms.TextBox();
             this.bil_dtOfBil_add_txt = new System.Windows.Forms.TextBox();
             this.bil_venNam_add_txt = new System.Windows.Forms.TextBox();
-            this.bil_dtOfBil_add_dtp = new System.Windows.Forms.DateTimePicker();
-            this.bil_senForPro_add_dtp = new System.Windows.Forms.DateTimePicker();
-            this.invt_cldtFr_srch_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bil_add_grb.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bil_add_grb
@@ -87,6 +87,62 @@
             this.bil_add_grb.TabIndex = 0;
             this.bil_add_grb.TabStop = false;
             this.bil_add_grb.Text = "Add Bill Record";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(279, 120);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.TabIndex = 83;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(900, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(601, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 24);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // invt_cldtFr_srch_btn
+            // 
+            this.invt_cldtFr_srch_btn.BackColor = System.Drawing.SystemColors.Window;
+            this.invt_cldtFr_srch_btn.Location = new System.Drawing.Point(601, 23);
+            this.invt_cldtFr_srch_btn.Name = "invt_cldtFr_srch_btn";
+            this.invt_cldtFr_srch_btn.Size = new System.Drawing.Size(22, 24);
+            this.invt_cldtFr_srch_btn.TabIndex = 18;
+            this.invt_cldtFr_srch_btn.Text = "X";
+            this.invt_cldtFr_srch_btn.UseVisualStyleBackColor = false;
+            // 
+            // bil_senForPro_add_dtp
+            // 
+            this.bil_senForPro_add_dtp.Location = new System.Drawing.Point(584, 71);
+            this.bil_senForPro_add_dtp.Name = "bil_senForPro_add_dtp";
+            this.bil_senForPro_add_dtp.Size = new System.Drawing.Size(19, 22);
+            this.bil_senForPro_add_dtp.TabIndex = 17;
+            this.bil_senForPro_add_dtp.ValueChanged += new System.EventHandler(this.bil_senForPro_add_dtp_ValueChanged);
+            // 
+            // bil_dtOfBil_add_dtp
+            // 
+            this.bil_dtOfBil_add_dtp.Location = new System.Drawing.Point(584, 24);
+            this.bil_dtOfBil_add_dtp.Name = "bil_dtOfBil_add_dtp";
+            this.bil_dtOfBil_add_dtp.Size = new System.Drawing.Size(19, 22);
+            this.bil_dtOfBil_add_dtp.TabIndex = 16;
+            this.bil_dtOfBil_add_dtp.ValueChanged += new System.EventHandler(this.bil_dtOfBil_add_dtp_ValueChanged);
             // 
             // bil_clr_add_btn
             // 
@@ -225,62 +281,6 @@
             this.bil_venNam_add_txt.Size = new System.Drawing.Size(154, 22);
             this.bil_venNam_add_txt.TabIndex = 0;
             // 
-            // bil_dtOfBil_add_dtp
-            // 
-            this.bil_dtOfBil_add_dtp.Location = new System.Drawing.Point(584, 24);
-            this.bil_dtOfBil_add_dtp.Name = "bil_dtOfBil_add_dtp";
-            this.bil_dtOfBil_add_dtp.Size = new System.Drawing.Size(19, 22);
-            this.bil_dtOfBil_add_dtp.TabIndex = 16;
-            this.bil_dtOfBil_add_dtp.ValueChanged += new System.EventHandler(this.bil_dtOfBil_add_dtp_ValueChanged);
-            // 
-            // bil_senForPro_add_dtp
-            // 
-            this.bil_senForPro_add_dtp.Location = new System.Drawing.Point(584, 71);
-            this.bil_senForPro_add_dtp.Name = "bil_senForPro_add_dtp";
-            this.bil_senForPro_add_dtp.Size = new System.Drawing.Size(19, 22);
-            this.bil_senForPro_add_dtp.TabIndex = 17;
-            this.bil_senForPro_add_dtp.ValueChanged += new System.EventHandler(this.bil_senForPro_add_dtp_ValueChanged);
-            // 
-            // invt_cldtFr_srch_btn
-            // 
-            this.invt_cldtFr_srch_btn.BackColor = System.Drawing.SystemColors.Window;
-            this.invt_cldtFr_srch_btn.Location = new System.Drawing.Point(601, 23);
-            this.invt_cldtFr_srch_btn.Name = "invt_cldtFr_srch_btn";
-            this.invt_cldtFr_srch_btn.Size = new System.Drawing.Size(22, 24);
-            this.invt_cldtFr_srch_btn.TabIndex = 18;
-            this.invt_cldtFr_srch_btn.Text = "X";
-            this.invt_cldtFr_srch_btn.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(601, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 24);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(900, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 82;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(279, 120);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.TabIndex = 83;
-            this.pictureBox2.TabStop = false;
-            // 
             // bil_trck_add_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,11 +288,12 @@
             this.ClientSize = new System.Drawing.Size(972, 453);
             this.Controls.Add(this.bil_add_grb);
             this.Name = "bil_trck_add_frm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing Tracker Add Record";
             this.bil_add_grb.ResumeLayout(false);
             this.bil_add_grb.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

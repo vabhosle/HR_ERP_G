@@ -25,16 +25,14 @@ namespace form1
 
         private void InterventionTrackSearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            invt_trck_srch_frm invt_search = new invt_trck_srch_frm();
-            invt_search.MdiParent = this;
-            invt_search.Show();
+            invt_trck_add_frm interventionTracker = new invt_trck_add_frm();
+            interventionTracker.MdiParent = this;
+            interventionTracker.Show();
         }
 
-        private void InterventionTrackAddToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TrackerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            invt_trck_add_frm InterventionTrack_AddRec = new invt_trck_add_frm();
-            InterventionTrack_AddRec.MdiParent = this;
-            InterventionTrack_AddRec.Show();
+            
         }
 
 
@@ -47,7 +45,7 @@ namespace form1
 
         private void ManpowerTrackAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp_trck_tdd_frm ManpowerTrack_AddRec = new mp_trck_tdd_frm();
+            mp_trck_add_frm ManpowerTrack_AddRec = new mp_trck_add_frm();
             ManpowerTrack_AddRec.MdiParent = this;
             ManpowerTrack_AddRec.Show();
         }
@@ -80,6 +78,20 @@ namespace form1
             }
 
            
+        }
+
+        private void InterventionTrackAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mp_trck_add_frm manpowerTracker = new mp_trck_add_frm();
+            manpowerTracker.MdiParent = this;
+            manpowerTracker.Show();
+        }
+
+        private void billingTrackerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bil_trck_add_frm billingTracker = new bil_trck_add_frm();
+            billingTracker.MdiParent = this;
+            billingTracker.Show();
         }
     }
 }

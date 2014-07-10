@@ -36,6 +36,8 @@
             this.ManpowerAdd_ReptMngr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ManpowerAdd_Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ManpowerAdd_DOJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mp_genRpt_srch_btn = new System.Windows.Forms.Button();
+            this.mp_expExl_srch_btn = new System.Windows.Forms.Button();
             this.ManpowerDet_lblEdpNlo = new System.Windows.Forms.Label();
             this.ManpowerDet_lblName = new System.Windows.Forms.Label();
             this.ManpowerDet_lblGrade = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.mp_srch_srch_btn = new System.Windows.Forms.Button();
             this.mp_clr_srch_bt = new System.Windows.Forms.Button();
             this.mp_srch_grb = new System.Windows.Forms.GroupBox();
-            this.mp_genRpt_srch_btn = new System.Windows.Forms.Button();
-            this.mp_expExl_srch_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mp_srch_dgv)).BeginInit();
             this.mp_srch_grb.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,28 @@
             // 
             this.ManpowerAdd_DOJ.HeaderText = "Date of Joining";
             this.ManpowerAdd_DOJ.Name = "ManpowerAdd_DOJ";
+            // 
+            // mp_genRpt_srch_btn
+            // 
+            this.mp_genRpt_srch_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mp_genRpt_srch_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mp_genRpt_srch_btn.Location = new System.Drawing.Point(834, 463);
+            this.mp_genRpt_srch_btn.Name = "mp_genRpt_srch_btn";
+            this.mp_genRpt_srch_btn.Size = new System.Drawing.Size(151, 32);
+            this.mp_genRpt_srch_btn.TabIndex = 35;
+            this.mp_genRpt_srch_btn.Text = "Generate Report";
+            this.mp_genRpt_srch_btn.UseVisualStyleBackColor = false;
+            // 
+            // mp_expExl_srch_btn
+            // 
+            this.mp_expExl_srch_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mp_expExl_srch_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mp_expExl_srch_btn.Location = new System.Drawing.Point(681, 463);
+            this.mp_expExl_srch_btn.Name = "mp_expExl_srch_btn";
+            this.mp_expExl_srch_btn.Size = new System.Drawing.Size(138, 32);
+            this.mp_expExl_srch_btn.TabIndex = 34;
+            this.mp_expExl_srch_btn.Text = "Export To Excel";
+            this.mp_expExl_srch_btn.UseVisualStyleBackColor = false;
             // 
             // ManpowerDet_lblEdpNlo
             // 
@@ -276,32 +298,11 @@
             this.mp_srch_grb.TabStop = false;
             this.mp_srch_grb.Text = "Search Record";
             // 
-            // mp_genRpt_srch_btn
-            // 
-            this.mp_genRpt_srch_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mp_genRpt_srch_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mp_genRpt_srch_btn.Location = new System.Drawing.Point(834, 463);
-            this.mp_genRpt_srch_btn.Name = "mp_genRpt_srch_btn";
-            this.mp_genRpt_srch_btn.Size = new System.Drawing.Size(151, 32);
-            this.mp_genRpt_srch_btn.TabIndex = 35;
-            this.mp_genRpt_srch_btn.Text = "Generate Report";
-            this.mp_genRpt_srch_btn.UseVisualStyleBackColor = false;
-            // 
-            // mp_expExl_srch_btn
-            // 
-            this.mp_expExl_srch_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mp_expExl_srch_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mp_expExl_srch_btn.Location = new System.Drawing.Point(681, 463);
-            this.mp_expExl_srch_btn.Name = "mp_expExl_srch_btn";
-            this.mp_expExl_srch_btn.Size = new System.Drawing.Size(138, 32);
-            this.mp_expExl_srch_btn.TabIndex = 34;
-            this.mp_expExl_srch_btn.Text = "Export To Excel";
-            this.mp_expExl_srch_btn.UseVisualStyleBackColor = false;
-            // 
             // mp_trck_srch_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(998, 498);
             this.Controls.Add(this.mp_genRpt_srch_btn);
             this.Controls.Add(this.mp_expExl_srch_btn);
@@ -326,6 +327,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ManpowerAdd_ReptMngr;
         private System.Windows.Forms.DataGridViewTextBoxColumn ManpowerAdd_Location;
         private System.Windows.Forms.DataGridViewTextBoxColumn ManpowerAdd_DOJ;
+        private System.Windows.Forms.Button mp_genRpt_srch_btn;
+        private System.Windows.Forms.Button mp_expExl_srch_btn;
         private System.Windows.Forms.Label ManpowerDet_lblEdpNlo;
         private System.Windows.Forms.Label ManpowerDet_lblName;
         private System.Windows.Forms.Label ManpowerDet_lblGrade;
@@ -343,8 +346,6 @@
         private System.Windows.Forms.Button mp_srch_srch_btn;
         private System.Windows.Forms.Button mp_clr_srch_bt;
         private System.Windows.Forms.GroupBox mp_srch_grb;
-        private System.Windows.Forms.Button mp_genRpt_srch_btn;
-        private System.Windows.Forms.Button mp_expExl_srch_btn;
 
     }
 }
