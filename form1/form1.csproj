@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="arguments.cs" />
+    <Compile Include="Billing_Tracker\Bill_Trck_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing_Tracker\Bill_Trck_Add.designer.cs">
+      <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="connection.cs" />
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queryShooter.cs" />
+    <EmbeddedResource Include="Billing_Tracker\Bill_Trck_Add.resx">
+      <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
