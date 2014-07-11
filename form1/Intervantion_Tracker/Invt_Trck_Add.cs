@@ -436,23 +436,26 @@ namespace form1
 
         private void it_srch_search_btn_Click(object sender, EventArgs e)
         {
-            DataTable table = new DataTable("Dataquery");
-            table.Columns.Add(new DataColumn("trainingName"));
-            table.Columns.Add(new DataColumn("trainingLocation"));
-            table.Columns.Add(new DataColumn("batch"));
-            table.Columns.Add(new DataColumn("trainerName"));
 
-
-            DataRow newRow = table.NewRow();
-
-            newRow[0] = it_srch_trainingName_txt.Text;
-            newRow[1] = it_srch_trainingLocation_txt.Text;
-            newRow[2] = it_srch_trainerName_txt.Text;
-            newRow[3] = it_srch_batch_txt.Text;
-
-           table.Rows.Add(newRow);
-           string xml = ConvertToXMLDataString(table);
-           MessageBox.Show(xml);
+            
+            Dictionary<string, string> d = new Dictionary<string, string>()
+                {
+                    {"iv_invtName", it_srch_trainingName_txt.Text},
+                    {"iv_invtLocation", it_srch_trainingLocation_txt.Text},
+                    {"iv_trainerName", it_srch_trainerName_txt.Text},
+                    {"iv_invtBatch", it_srch_batch_txt.Text},
+                    {"iv_invtFromDate", it_srch_fromDate_txt.Text},
+                    {"iv_invtToDate", it_srch_toDate_txt.Text},
+                    {"iv_invtHours", it_srch_trainingHours_txt.Text},
+                    {"iv_attdCount", it_srch_headCount_txt.Text},
+                    {"iv_venueCost", it_srch_venueCost_txt.Text},
+                    {"iv_trainerCost", it_srch_trainerFees_txt.Text},
+                    {"iv_trasportCost", it_srch_transportCost_txt.Text},
+                    {"iv_acmdCost", it_srch_accomodation_txt.Text},
+                    {"iv_miscCost", it_srch_miscellaneous_txt.Text},
+                    {"iv_totalCost", it_srch_total_txt.Text}
+                };
+            searchInterventions(d);
         }
 
         private void it_srch_clear_btn_Click(object sender, EventArgs e)
@@ -919,24 +922,19 @@ namespace form1
             }
             
         }
-        public string ConvertToXMLDataString(DataTable table)
+        private void searchInterventions(Dictionary<string,string> d)
         {
-            StringBuilder XMLString = new StringBuilder();
-            if (string.IsNullOrEmpty(table.TableName))
-                table.TableName = "DataTable";
-            XMLString.AppendFormat("<{0}>", table.TableName);
-            DataColumnCollection tableColumns = table.Columns;
-            foreach (DataRow row in table.Rows)
+            try
             {
-                XMLString.AppendFormat("<ParamRow>");
-                foreach (DataColumn column in tableColumns)
-                {
-                    XMLString.AppendFormat("<{1}>{0}</{1}>", row[column].ToString(), column.ColumnName);
-                }
-                XMLString.AppendFormat("</ParamRow>");
+                queryShooter query = new queryShooter();
+                //int doc = 0;
+               // doc = query.invt_invt_add_mp_add(xml);
+                showAlert("*Participants saved successfully.", true);
             }
-            XMLString.AppendFormat("</{0}>", table.TableName);
-            return XMLString.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Oops! Something went wrong.");
+            }
         }
         /*------------------------------------------------------------  Form sql call end ---------------------------------------------------------------------*/
     }
