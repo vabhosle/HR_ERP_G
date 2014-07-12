@@ -232,8 +232,53 @@ class queryShooter
         destroyConnection(SqlCon);
         return doc;
     }
+    public XmlDocument invt_srch_searchIntervention(Dictionary<string, string> dict)
+    {
+        SqlCon = createConnection();
+        sqlCmd = new SqlCommand("EXEC [dbo].[usp_hr_invt_select_intervention] "
+        + "@iv_invtName=@iv_INVTNAME,"
+        + "@iv_invtLocation=@iv_INVTLOCATION,"
+        + "@iv_trainerName=@iv_TRAINERNAME,"
+        + "@iv_invtBatch=@iv_INVTBATCH,"
+        + "@iv_invtFromDate=@iv_INVTFROMDATE,"
+        + "@iv_invtToDate=@iv_INVTTODATE,"
+        + "@iv_invtHours=@iv_INVTHOURS,"
+        + "@iv_attdCount=@iv_INVTCOUNT,"
+        + "@iv_venueCost=@iv_VENUECOST,"
+        + "@iv_trainerCost=@iv_TRAINERCOST,"
+        + "@iv_trasportCost=@iv_TRANSPORTCOST,"
+        + "@iv_acmdCost=@iv_ACMDCOST,"
+        + "@iv_miscCost=@iv_MISCCOST,"
+        + "@iv_totalCost=@iv_TOTALCOST", SqlCon);
+
+        sqlCmd.Parameters.Add("@iv_INVTNAME", SqlDbType.VarChar, 50); sqlCmd.Parameters["@iv_INVTNAME"].Value = dict["iv_invtName"];
+        sqlCmd.Parameters.Add("@iv_INVTLOCATION", SqlDbType.VarChar, 50); sqlCmd.Parameters["@iv_INVTLOCATION"].Value = dict["iv_invtLocation"];
+        sqlCmd.Parameters.Add("@iv_TRAINERNAME", SqlDbType.VarChar, 50); sqlCmd.Parameters["@iv_TRAINERNAME"].Value = dict["iv_trainerName"];
+        sqlCmd.Parameters.Add("@iv_INVTBATCH", SqlDbType.VarChar, 50); sqlCmd.Parameters["@iv_INVTBATCH"].Value = dict["iv_invtBatch"];
+
+        sqlCmd.Parameters.Add("@iv_INVTFROMDATE", SqlDbType.DateTime); sqlCmd.Parameters["@iv_INVTFROMDATE"].Value = dict["iv_invtFromDate"];
+        sqlCmd.Parameters.Add("@iv_INVTTODATE", SqlDbType.DateTime); sqlCmd.Parameters["@iv_INVTTODATE"].Value = dict["iv_invtToDate"];
+        sqlCmd.Parameters.Add("@iv_INVTHOURS", SqlDbType.Int); sqlCmd.Parameters["@iv_INVTHOURS"].Value = Convert.ToInt32(dict["iv_invtHours"]);
+        sqlCmd.Parameters.Add("@iv_INVTCOUNT", SqlDbType.Int); sqlCmd.Parameters["@iv_INVTCOUNT"].Value = Convert.ToInt32(dict["iv_attdCount"]);
 
 
+        sqlCmd.Parameters.Add("@iv_VENUECOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_VENUECOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_venueCost"]));
+        sqlCmd.Parameters.Add("@iv_TRAINERCOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_TRAINERCOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_trainerCost"]));
+        sqlCmd.Parameters.Add("@iv_TRANSPORTCOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_TRANSPORTCOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_trasportCost"]));
+        sqlCmd.Parameters.Add("@iv_ACMDCOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_ACMDCOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_acmdCost"]));
+        sqlCmd.Parameters.Add("@iv_MISCCOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_MISCCOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_miscCost"]));
+        sqlCmd.Parameters.Add("@iv_TOTALCOST", SqlDbType.Decimal); sqlCmd.Parameters["@iv_TOTALCOST"].Value = Math.Round(Convert.ToDecimal(dict["iv_totalCost"]));
+
+        dr = sqlCmd.ExecuteReader();
+        while (dr.Read())
+        {
+            string XMLStr = dr[0].ToString();
+            doc.LoadXml(XMLStr);
+        }
+        destroyConnection(SqlCon);
+        return doc;
+
+    }
 
     private SqlConnection createConnection()
     {

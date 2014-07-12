@@ -61,6 +61,12 @@
             this.invt_clrInvt_add_btn = new System.Windows.Forms.Button();
             this.invt_saveInvt_add_btn = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.invt_cldtTo_srch_btn = new System.Windows.Forms.Button();
             this.invt_cldtFr_srch_btn = new System.Windows.Forms.Button();
             this.invt_couDtTo_add_dtp = new System.Windows.Forms.DateTimePicker();
@@ -97,6 +103,12 @@
             this.it_srch_clear_btn = new System.Windows.Forms.Button();
             this.it_srch_search_btn = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.it_srch_clearToDate_btn = new System.Windows.Forms.Button();
             this.it_srch_clearFromDate_btn = new System.Windows.Forms.Button();
             this.it_srch_toDate_dtp = new System.Windows.Forms.DateTimePicker();
@@ -131,20 +143,22 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.it_res_clearSearch_btn = new System.Windows.Forms.Button();
             this.it_res_records_dgv = new System.Windows.Forms.DataGridView();
-            this.dgv_trainingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_trainingLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_trainerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_trainingHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_headCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_venueCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_trainerFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_transportCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_accomodation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_miscellaneous = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_fromDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_toDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_trainerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtBatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_attdCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_venueCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_trainerCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_trasportCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_acmdCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_miscCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_totalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtFromDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iv_invtToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.it_tab_update = new System.Windows.Forms.TabPage();
             this.it_updt_updatePanel_pan = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -174,6 +188,12 @@
             this.label41 = new System.Windows.Forms.Label();
             this.it_updt_clear_btn = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.it_updt_clearToDate_btn = new System.Windows.Forms.Button();
             this.it_updt_clearFromDate_btn = new System.Windows.Forms.Button();
             this.it_updt_toDate_dtp = new System.Windows.Forms.DateTimePicker();
@@ -204,32 +224,26 @@
             this.it_updt_trainingLocation_txt = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.it_tab_main.SuspendLayout();
             this.it_tab_add.SuspendLayout();
             this.invt_add_prtcGrb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invt_add_dgv)).BeginInit();
             this.invt_add_invtGrb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.it_tab_search.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.it_tab_result.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.it_res_records_dgv)).BeginInit();
@@ -238,18 +252,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.it_updt_participants_dgv)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -272,6 +274,7 @@
             this.it_tab_main.Size = new System.Drawing.Size(1201, 625);
             this.it_tab_main.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.it_tab_main.TabIndex = 0;
+            this.it_tab_main.Selected += new System.Windows.Forms.TabControlEventHandler(this.it_tab_main_Selected);
             // 
             // it_tab_add
             // 
@@ -659,6 +662,66 @@
             this.label22.Size = new System.Drawing.Size(96, 16);
             this.label22.TabIndex = 88;
             this.label22.Text = "Training Hours";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox6.Location = new System.Drawing.Point(1143, 121);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox6.TabIndex = 86;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Location = new System.Drawing.Point(855, 121);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox5.TabIndex = 85;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Location = new System.Drawing.Point(258, 171);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.TabIndex = 84;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Location = new System.Drawing.Point(555, 174);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.TabIndex = 83;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(555, 121);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.TabIndex = 82;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(258, 121);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
             // 
             // invt_cldtTo_srch_btn
             // 
@@ -1082,6 +1145,66 @@
             this.label28.TabIndex = 88;
             this.label28.Text = "Training Hours";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox7.Location = new System.Drawing.Point(1143, 121);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox7.TabIndex = 86;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox8.Location = new System.Drawing.Point(855, 121);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox8.TabIndex = 85;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox9.Location = new System.Drawing.Point(258, 171);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox9.TabIndex = 84;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox10.Location = new System.Drawing.Point(555, 174);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox10.TabIndex = 83;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox11.Location = new System.Drawing.Point(555, 121);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox11.TabIndex = 82;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox12.Location = new System.Drawing.Point(258, 121);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox12.TabIndex = 81;
+            this.pictureBox12.TabStop = false;
+            // 
             // it_srch_clearToDate_btn
             // 
             this.it_srch_clearToDate_btn.BackColor = System.Drawing.SystemColors.Window;
@@ -1091,6 +1214,7 @@
             this.it_srch_clearToDate_btn.TabIndex = 8;
             this.it_srch_clearToDate_btn.Text = "X";
             this.it_srch_clearToDate_btn.UseVisualStyleBackColor = false;
+            this.it_srch_clearToDate_btn.Click += new System.EventHandler(this.it_srch_clearToDate_btn_Click);
             // 
             // it_srch_clearFromDate_btn
             // 
@@ -1101,6 +1225,7 @@
             this.it_srch_clearFromDate_btn.TabIndex = 6;
             this.it_srch_clearFromDate_btn.Text = "X";
             this.it_srch_clearFromDate_btn.UseVisualStyleBackColor = false;
+            this.it_srch_clearFromDate_btn.Click += new System.EventHandler(this.it_srch_clearFromDate_btn_Click);
             // 
             // it_srch_toDate_dtp
             // 
@@ -1108,6 +1233,7 @@
             this.it_srch_toDate_dtp.Name = "it_srch_toDate_dtp";
             this.it_srch_toDate_dtp.Size = new System.Drawing.Size(19, 22);
             this.it_srch_toDate_dtp.TabIndex = 7;
+            this.it_srch_toDate_dtp.ValueChanged += new System.EventHandler(this.it_srch_toDate_dtp_ValueChanged);
             // 
             // it_srch_fromDate_dtp
             // 
@@ -1115,6 +1241,7 @@
             this.it_srch_fromDate_dtp.Name = "it_srch_fromDate_dtp";
             this.it_srch_fromDate_dtp.Size = new System.Drawing.Size(19, 22);
             this.it_srch_fromDate_dtp.TabIndex = 5;
+            this.it_srch_fromDate_dtp.ValueChanged += new System.EventHandler(this.it_srch_fromDate_dtp_ValueChanged);
             // 
             // label29
             // 
@@ -1392,12 +1519,13 @@
             this.it_res_clearSearch_btn.TabIndex = 21;
             this.it_res_clearSearch_btn.Text = "Clear Search";
             this.it_res_clearSearch_btn.UseVisualStyleBackColor = false;
+            this.it_res_clearSearch_btn.Click += new System.EventHandler(this.it_res_clearSearch_btn_Click);
             // 
             // it_res_records_dgv
             // 
             this.it_res_records_dgv.AllowUserToAddRows = false;
-            this.it_res_records_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.it_res_records_dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.it_res_records_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1409,135 +1537,148 @@
             this.it_res_records_dgv.ColumnHeadersHeight = 30;
             this.it_res_records_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.it_res_records_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv_trainingName,
-            this.dgv_trainingLocation,
-            this.dgv_trainerName,
-            this.dgv_batch,
-            this.dgv_trainingHours,
-            this.dgv_headCount,
-            this.dgv_venueCost,
-            this.dgv_trainerFees,
-            this.dgv_transportCost,
-            this.dgv_accomodation,
-            this.dgv_miscellaneous,
-            this.dgv_total,
-            this.dgv_fromDate,
-            this.dgv_toDate});
+            this.iv_invtNo,
+            this.iv_invtName,
+            this.iv_invtLocation,
+            this.iv_trainerName,
+            this.iv_invtBatch,
+            this.iv_invtMonth,
+            this.iv_invtHours,
+            this.iv_attdCount,
+            this.iv_venueCost,
+            this.iv_trainerCost,
+            this.iv_trasportCost,
+            this.iv_acmdCost,
+            this.iv_miscCost,
+            this.iv_totalCost,
+            this.iv_invtFromDate,
+            this.iv_invtToDate});
             this.it_res_records_dgv.Location = new System.Drawing.Point(10, 24);
             this.it_res_records_dgv.Name = "it_res_records_dgv";
             this.it_res_records_dgv.Size = new System.Drawing.Size(1161, 501);
             this.it_res_records_dgv.TabIndex = 22;
+            this.it_res_records_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.it_res_records_dgv_CellClick);
+            this.it_res_records_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.it_res_records_dgv_CellContentClick);
             // 
-            // dgv_trainingName
+            // iv_invtNo
             // 
-            this.dgv_trainingName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_trainingName.HeaderText = "Training Name";
-            this.dgv_trainingName.MaxInputLength = 10;
-            this.dgv_trainingName.Name = "dgv_trainingName";
-            this.dgv_trainingName.ReadOnly = true;
-            this.dgv_trainingName.Width = 103;
+            this.iv_invtNo.HeaderText = "Invt No";
+            this.iv_invtNo.Name = "iv_invtNo";
+            this.iv_invtNo.Visible = false;
             // 
-            // dgv_trainingLocation
+            // iv_invtName
             // 
-            this.dgv_trainingLocation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_trainingLocation.FillWeight = 40.47091F;
-            this.dgv_trainingLocation.HeaderText = "Training Location";
-            this.dgv_trainingLocation.Name = "dgv_trainingLocation";
-            this.dgv_trainingLocation.ReadOnly = true;
-            this.dgv_trainingLocation.Width = 170;
+            this.iv_invtName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_invtName.HeaderText = "Training Name";
+            this.iv_invtName.MaxInputLength = 10;
+            this.iv_invtName.Name = "iv_invtName";
+            this.iv_invtName.ReadOnly = true;
+            this.iv_invtName.Width = 150;
             // 
-            // dgv_trainerName
+            // iv_invtLocation
             // 
-            this.dgv_trainerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_trainerName.FillWeight = 40.47091F;
-            this.dgv_trainerName.HeaderText = "Trainer Name";
-            this.dgv_trainerName.Name = "dgv_trainerName";
-            this.dgv_trainerName.ReadOnly = true;
-            this.dgv_trainerName.Width = 88;
+            this.iv_invtLocation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_invtLocation.FillWeight = 40.47091F;
+            this.iv_invtLocation.HeaderText = "Training Location";
+            this.iv_invtLocation.Name = "iv_invtLocation";
+            this.iv_invtLocation.ReadOnly = true;
+            this.iv_invtLocation.Width = 150;
             // 
-            // dgv_batch
+            // iv_trainerName
             // 
-            this.dgv_batch.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_batch.FillWeight = 40.47091F;
-            this.dgv_batch.HeaderText = "Batch";
-            this.dgv_batch.Name = "dgv_batch";
-            this.dgv_batch.ReadOnly = true;
+            this.iv_trainerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_trainerName.FillWeight = 40.47091F;
+            this.iv_trainerName.HeaderText = "Trainer Name";
+            this.iv_trainerName.Name = "iv_trainerName";
+            this.iv_trainerName.ReadOnly = true;
             // 
-            // dgv_trainingHours
+            // iv_invtBatch
             // 
-            this.dgv_trainingHours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_trainingHours.FillWeight = 40.47091F;
-            this.dgv_trainingHours.HeaderText = "Training Hours";
-            this.dgv_trainingHours.Name = "dgv_trainingHours";
-            this.dgv_trainingHours.ReadOnly = true;
+            this.iv_invtBatch.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_invtBatch.FillWeight = 40.47091F;
+            this.iv_invtBatch.HeaderText = "Batch";
+            this.iv_invtBatch.Name = "iv_invtBatch";
+            this.iv_invtBatch.ReadOnly = true;
             // 
-            // dgv_headCount
+            // iv_invtMonth
             // 
-            this.dgv_headCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_headCount.FillWeight = 40.47091F;
-            this.dgv_headCount.HeaderText = "Head Count";
-            this.dgv_headCount.Name = "dgv_headCount";
-            this.dgv_headCount.ReadOnly = true;
-            this.dgv_headCount.Width = 170;
+            this.iv_invtMonth.HeaderText = "Month";
+            this.iv_invtMonth.Name = "iv_invtMonth";
             // 
-            // dgv_venueCost
+            // iv_invtHours
             // 
-            this.dgv_venueCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_venueCost.FillWeight = 40.47091F;
-            this.dgv_venueCost.HeaderText = "Venue Cost";
-            this.dgv_venueCost.Name = "dgv_venueCost";
-            this.dgv_venueCost.ReadOnly = true;
-            this.dgv_venueCost.Width = 88;
+            this.iv_invtHours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_invtHours.FillWeight = 40.47091F;
+            this.iv_invtHours.HeaderText = "Training Hours";
+            this.iv_invtHours.Name = "iv_invtHours";
+            this.iv_invtHours.ReadOnly = true;
+            this.iv_invtHours.Width = 150;
             // 
-            // dgv_trainerFees
+            // iv_attdCount
             // 
-            this.dgv_trainerFees.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_trainerFees.FillWeight = 40.47091F;
-            this.dgv_trainerFees.HeaderText = "Trainer Fees";
-            this.dgv_trainerFees.Name = "dgv_trainerFees";
-            this.dgv_trainerFees.ReadOnly = true;
-            this.dgv_trainerFees.Width = 150;
+            this.iv_attdCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_attdCount.FillWeight = 40.47091F;
+            this.iv_attdCount.HeaderText = "Head Count";
+            this.iv_attdCount.Name = "iv_attdCount";
+            this.iv_attdCount.ReadOnly = true;
             // 
-            // dgv_transportCost
+            // iv_venueCost
             // 
-            this.dgv_transportCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dgv_transportCost.FillWeight = 40.47091F;
-            this.dgv_transportCost.HeaderText = "Transport Cost";
-            this.dgv_transportCost.MaxInputLength = 3;
-            this.dgv_transportCost.Name = "dgv_transportCost";
-            this.dgv_transportCost.ReadOnly = true;
-            this.dgv_transportCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_transportCost.Width = 121;
+            this.iv_venueCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_venueCost.FillWeight = 40.47091F;
+            this.iv_venueCost.HeaderText = "Venue Cost";
+            this.iv_venueCost.Name = "iv_venueCost";
+            this.iv_venueCost.ReadOnly = true;
             // 
-            // dgv_accomodation
+            // iv_trainerCost
             // 
-            this.dgv_accomodation.HeaderText = "Accomodation";
-            this.dgv_accomodation.Name = "dgv_accomodation";
-            this.dgv_accomodation.ReadOnly = true;
+            this.iv_trainerCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iv_trainerCost.FillWeight = 40.47091F;
+            this.iv_trainerCost.HeaderText = "Trainer Fees";
+            this.iv_trainerCost.Name = "iv_trainerCost";
+            this.iv_trainerCost.ReadOnly = true;
             // 
-            // dgv_miscellaneous
+            // iv_trasportCost
             // 
-            this.dgv_miscellaneous.HeaderText = "Miscellaneous";
-            this.dgv_miscellaneous.Name = "dgv_miscellaneous";
-            this.dgv_miscellaneous.ReadOnly = true;
+            this.iv_trasportCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.iv_trasportCost.HeaderText = "Transport Cost";
+            this.iv_trasportCost.MaxInputLength = 3;
+            this.iv_trasportCost.Name = "iv_trasportCost";
+            this.iv_trasportCost.ReadOnly = true;
+            this.iv_trasportCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.iv_trasportCost.Width = 121;
             // 
-            // dgv_total
+            // iv_acmdCost
             // 
-            this.dgv_total.HeaderText = "Total";
-            this.dgv_total.Name = "dgv_total";
-            this.dgv_total.ReadOnly = true;
+            this.iv_acmdCost.HeaderText = "Accomodation";
+            this.iv_acmdCost.Name = "iv_acmdCost";
+            this.iv_acmdCost.ReadOnly = true;
+            this.iv_acmdCost.Width = 120;
             // 
-            // dgv_fromDate
+            // iv_miscCost
             // 
-            this.dgv_fromDate.HeaderText = "From Date";
-            this.dgv_fromDate.Name = "dgv_fromDate";
-            this.dgv_fromDate.ReadOnly = true;
+            this.iv_miscCost.HeaderText = "Miscellaneous";
+            this.iv_miscCost.Name = "iv_miscCost";
+            this.iv_miscCost.ReadOnly = true;
+            this.iv_miscCost.Width = 120;
             // 
-            // dgv_toDate
+            // iv_totalCost
             // 
-            this.dgv_toDate.HeaderText = "To Date";
-            this.dgv_toDate.Name = "dgv_toDate";
-            this.dgv_toDate.ReadOnly = true;
+            this.iv_totalCost.HeaderText = "Total";
+            this.iv_totalCost.Name = "iv_totalCost";
+            this.iv_totalCost.ReadOnly = true;
+            // 
+            // iv_invtFromDate
+            // 
+            this.iv_invtFromDate.HeaderText = "From Date";
+            this.iv_invtFromDate.Name = "iv_invtFromDate";
+            this.iv_invtFromDate.ReadOnly = true;
+            // 
+            // iv_invtToDate
+            // 
+            this.iv_invtToDate.HeaderText = "To Date";
+            this.iv_invtToDate.Name = "iv_invtToDate";
+            this.iv_invtToDate.ReadOnly = true;
             // 
             // it_tab_update
             // 
@@ -1907,6 +2048,66 @@
             this.label42.TabIndex = 88;
             this.label42.Text = "Training Hours";
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox13.Location = new System.Drawing.Point(1143, 121);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox13.TabIndex = 86;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox14.Location = new System.Drawing.Point(855, 121);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox14.TabIndex = 85;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox15.Location = new System.Drawing.Point(258, 171);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox15.TabIndex = 84;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox16.Location = new System.Drawing.Point(555, 174);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox16.TabIndex = 83;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox17.Location = new System.Drawing.Point(555, 121);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox17.TabIndex = 82;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackgroundImage = global::form1.Properties.Resources.url1;
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox18.Location = new System.Drawing.Point(258, 121);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox18.TabIndex = 81;
+            this.pictureBox18.TabStop = false;
+            // 
             // it_updt_clearToDate_btn
             // 
             this.it_updt_clearToDate_btn.BackColor = System.Drawing.SystemColors.Window;
@@ -2186,186 +2387,6 @@
             this.label54.TabIndex = 72;
             this.label54.Text = "Training Location";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox6.Location = new System.Drawing.Point(1143, 121);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox6.TabIndex = 86;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Location = new System.Drawing.Point(855, 121);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox5.TabIndex = 85;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(258, 171);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.TabIndex = 84;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(555, 174);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.TabIndex = 83;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(555, 121);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.TabIndex = 82;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 121);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 81;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox7.Location = new System.Drawing.Point(1143, 121);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox7.TabIndex = 86;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox8.Location = new System.Drawing.Point(855, 121);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox8.TabIndex = 85;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox9.Location = new System.Drawing.Point(258, 171);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox9.TabIndex = 84;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox10.Location = new System.Drawing.Point(555, 174);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox10.TabIndex = 83;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox11.Location = new System.Drawing.Point(555, 121);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox11.TabIndex = 82;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox12.Location = new System.Drawing.Point(258, 121);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox12.TabIndex = 81;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox13.Location = new System.Drawing.Point(1143, 121);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox13.TabIndex = 86;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox14.Location = new System.Drawing.Point(855, 121);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox14.TabIndex = 85;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox15.Location = new System.Drawing.Point(258, 171);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox15.TabIndex = 84;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox16.Location = new System.Drawing.Point(555, 174);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox16.TabIndex = 83;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox17.Location = new System.Drawing.Point(555, 121);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox17.TabIndex = 82;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackgroundImage = global::form1.Properties.Resources.url1;
-            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox18.Location = new System.Drawing.Point(258, 121);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox18.TabIndex = 81;
-            this.pictureBox18.TabStop = false;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -2392,9 +2413,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.invt_add_dgv)).EndInit();
             this.invt_add_invtGrb.ResumeLayout(false);
             this.invt_add_invtGrb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.it_tab_search.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.it_tab_result.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.it_res_records_dgv)).EndInit();
@@ -2404,18 +2437,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.it_updt_participants_dgv)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -2541,20 +2562,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button it_res_clearSearch_btn;
         private System.Windows.Forms.DataGridView it_res_records_dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_trainingName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_trainingLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_trainerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_batch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_trainingHours;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_headCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_venueCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_trainerFees;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_transportCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_accomodation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_miscellaneous;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_fromDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_toDate;
         private System.Windows.Forms.TabPage it_tab_update;
         private System.Windows.Forms.Panel it_updt_updatePanel_pan;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -2620,6 +2627,22 @@
         private System.Windows.Forms.TextBox it_updt_trainingLocation_txt;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtLocation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_trainerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtBatch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_attdCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_venueCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_trainerCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_trasportCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_acmdCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_miscCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_totalCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtFromDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iv_invtToDate;
 
 
     }

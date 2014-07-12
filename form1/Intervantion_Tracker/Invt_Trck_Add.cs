@@ -14,6 +14,7 @@ namespace form1
     {
         int invtId = 0;
         int gridRowCount = 0;
+        bool isFromSearch = false;
         public invt_trck_add_frm()
         {
             InitializeComponent();
@@ -436,37 +437,66 @@ namespace form1
 
         private void it_srch_search_btn_Click(object sender, EventArgs e)
         {
-
-            
-            Dictionary<string, string> d = new Dictionary<string, string>()
-                {
-                    {"iv_invtName", it_srch_trainingName_txt.Text},
-                    {"iv_invtLocation", it_srch_trainingLocation_txt.Text},
-                    {"iv_trainerName", it_srch_trainerName_txt.Text},
-                    {"iv_invtBatch", it_srch_batch_txt.Text},
-                    {"iv_invtFromDate", it_srch_fromDate_txt.Text},
-                    {"iv_invtToDate", it_srch_toDate_txt.Text},
-                    {"iv_invtHours", it_srch_trainingHours_txt.Text},
-                    {"iv_attdCount", it_srch_headCount_txt.Text},
-                    {"iv_venueCost", it_srch_venueCost_txt.Text},
-                    {"iv_trainerCost", it_srch_trainerFees_txt.Text},
-                    {"iv_trasportCost", it_srch_transportCost_txt.Text},
-                    {"iv_acmdCost", it_srch_accomodation_txt.Text},
-                    {"iv_miscCost", it_srch_miscellaneous_txt.Text},
-                    {"iv_totalCost", it_srch_total_txt.Text}
-                };
-            searchInterventions(d);
+            isFromSearch = true;
+            searchInterventions(searchType(false));
         }
-
+        private void it_tab_main_Selected(object sender, TabControlEventArgs e)
+        {
+            if (e.TabPageIndex == 2 && !isFromSearch)
+            {
+                searchInterventions(searchType(true));
+            }
+        }
+        private void it_res_clearSearch_btn_Click(object sender, EventArgs e)
+        {
+            searchInterventions(searchType(true));
+        }
         private void it_srch_clear_btn_Click(object sender, EventArgs e)
         {
             it_srch_trainingName_txt.Text = "";
             it_srch_trainingLocation_txt.Text = "";
+            it_srch_trainerName_txt.Text = "";
             it_srch_batch_txt.Text = "";
+            it_srch_trainingHours_txt.Text = "";
+            it_srch_headCount_txt.Text = "";
+            it_srch_venueCost_txt.Text = "";
+            it_srch_trainerFees_txt.Text = "";
+            it_srch_transportCost_txt.Text = "";
+            it_srch_accomodation_txt.Text = "";
+            it_srch_miscellaneous_txt.Text = "";
+            it_srch_total_txt.Text = "";
+            it_srch_toDate_dtp.Value = DateTime.Today;
+            it_srch_fromDate_dtp.Value = DateTime.Today;
+            it_srch_fromDate_txt.Text = "";
+            it_srch_toDate_txt.Text = "";
+            
             
         }
+        private void it_srch_fromDate_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            it_srch_fromDate_txt.Text = it_srch_fromDate_dtp.Value.ToString("yyyy-MM-dd");
+        }
 
+        private void it_srch_toDate_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            it_srch_toDate_txt.Text = it_srch_toDate_dtp.Value.ToString("yyyy-MM-dd");
+        }
 
+        private void it_srch_clearToDate_btn_Click(object sender, EventArgs e)
+        {
+            it_srch_toDate_dtp.Value = DateTime.Today;
+            it_srch_toDate_txt.Text = "";
+        }
+
+        private void it_srch_clearFromDate_btn_Click(object sender, EventArgs e)
+        {
+            it_srch_fromDate_dtp.Value = DateTime.Today;
+            it_srch_fromDate_txt.Text = "";
+        }
+        private void it_res_records_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("" + it_res_records_dgv.Rows[e.RowIndex].Cells["iv_invtNo"].Value);
+        }
         /*------------------------------------------------------------  Form events end ---------------------------------------------------------------------*/
         
 
@@ -474,6 +504,53 @@ namespace form1
         
 
        /*--------------------------------------------------  Form Validation Functions start ---------------------------------------------------------------------*/
+
+        private Dictionary<string, string> searchType(bool all)
+        {
+            Dictionary<string, string> d;
+            if (all)
+            {
+                d = new Dictionary<string, string>()
+                {
+                    {"iv_invtName", ""},
+                    {"iv_invtLocation", ""},
+                    {"iv_trainerName", ""},
+                    {"iv_invtBatch", ""},
+                    {"iv_invtFromDate", appendSQLdateFormat("")},
+                    {"iv_invtToDate", appendSQLdateFormat("")},
+                    {"iv_invtHours", checkForEmptyCost("")},
+                    {"iv_attdCount", checkForEmptyCost("")},
+                    {"iv_venueCost", checkForEmptyCost("")},
+                    {"iv_trainerCost", checkForEmptyCost("")},
+                    {"iv_trasportCost", checkForEmptyCost("")},
+                    {"iv_acmdCost", checkForEmptyCost("")},
+                    {"iv_miscCost", checkForEmptyCost("")},
+                    {"iv_totalCost", checkForEmptyCost("")}
+                };
+            }
+            else
+            {
+                d = new Dictionary<string, string>()
+                {
+                    {"iv_invtName", it_srch_trainingName_txt.Text},
+                    {"iv_invtLocation", it_srch_trainingLocation_txt.Text},
+                    {"iv_trainerName", it_srch_trainerName_txt.Text},
+                    {"iv_invtBatch", it_srch_batch_txt.Text},
+                    {"iv_invtFromDate", appendSQLdateFormat(it_srch_fromDate_txt.Text)},
+                    {"iv_invtToDate", appendSQLdateFormat(it_srch_toDate_txt.Text)},
+                    {"iv_invtHours", checkForEmptyCost(it_srch_trainingHours_txt.Text)},
+                    {"iv_attdCount", checkForEmptyCost(it_srch_headCount_txt.Text)},
+                    {"iv_venueCost", checkForEmptyCost(it_srch_venueCost_txt.Text)},
+                    {"iv_trainerCost", checkForEmptyCost(it_srch_trainerFees_txt.Text)},
+                    {"iv_trasportCost", checkForEmptyCost(it_srch_transportCost_txt.Text)},
+                    {"iv_acmdCost", checkForEmptyCost(it_srch_accomodation_txt.Text)},
+                    {"iv_miscCost", checkForEmptyCost(it_srch_miscellaneous_txt.Text)},
+                    {"iv_totalCost", checkForEmptyCost(it_srch_total_txt.Text)}
+                };
+            }
+            return d;
+        }
+
         private void removeDataGridRow(DataGridViewRow row)
         {
             row.Cells["edpno"].Value = "";
@@ -677,19 +754,19 @@ namespace form1
         }
         private string appendSQLdateFormat(string date)
         {
-            if (date != "")
+            if (date.Trim() != "")
             {
                 date += "T00:00:00.000";
             }
             else
             {
-                date = DateTime.Now.ToString("yyyy-MM-dd")+"T00:00:00.000" ;
+                date = "1900-01-01T00:00:00.000";
             }
             return date;
         }
         private string getMonthFromDate(string date)
         {
-            if (date != "")
+            if (date.Trim() != "")
             {
                 DateTime dt = Convert.ToDateTime(date);
                 date = dt.ToString("MMMM");
@@ -927,15 +1004,46 @@ namespace form1
             try
             {
                 queryShooter query = new queryShooter();
-                //int doc = 0;
-               // doc = query.invt_invt_add_mp_add(xml);
-                showAlert("*Participants saved successfully.", true);
+                XmlDocument doc = new XmlDocument();
+                doc = query.invt_srch_searchIntervention(d);
+
+                it_res_records_dgv.Rows.Clear();
+                it_res_records_dgv.Refresh();
+
+                XmlNodeList elemList = doc.GetElementsByTagName("Intervention");
+                int attrVal = 0;
+                for (int i = 0; i < elemList.Count; i++)
+                {
+                    attrVal = elemList[i].Attributes.Count;
+                    List<string> myCollection = new List<string>();
+                    for (int j = 0; j < attrVal; j++)
+                    {
+                            myCollection.Add(elemList[i].Attributes[j].Value);
+                    }
+                    it_res_records_dgv.Rows.Add(myCollection.ToArray());
+                }
+                it_tab_main.SelectedIndex = 2;
+                if(isFromSearch)
+                    isFromSearch = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Oops! Something went wrong.");
             }
         }
+
+        private void it_res_records_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
+
+        
+
+        
+
+        
         /*------------------------------------------------------------  Form sql call end ---------------------------------------------------------------------*/
     }
 }
