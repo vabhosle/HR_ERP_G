@@ -13,8 +13,10 @@ namespace form1
     public partial class invt_trck_add_frm : Form
     {
         int invtId = 0;
+        int updateInvtId = 0;
         int gridRowCount = 0;
         bool isFromSearch = false;
+        XmlDocument searchXML = new XmlDocument();
         public invt_trck_add_frm()
         {
             InitializeComponent();
@@ -449,6 +451,8 @@ namespace form1
         }
         private void it_res_clearSearch_btn_Click(object sender, EventArgs e)
         {
+            isFromSearch = false;
+            it_srch_clear_btn_Click(sender, e);
             searchInterventions(searchType(true));
         }
         private void it_srch_clear_btn_Click(object sender, EventArgs e)
@@ -495,7 +499,84 @@ namespace form1
         }
         private void it_res_records_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("" + it_res_records_dgv.Rows[e.RowIndex].Cells["iv_invtNo"].Value);
+
+            XmlNodeList elemList = searchXML.GetElementsByTagName("Intervention");
+
+            for (int i = 0; i < elemList.Count; i++)
+            {
+                if (elemList[i].Attributes[0].Value == it_res_records_dgv.Rows[e.RowIndex].Cells["iv_invtNo"].Value)
+                {
+                    updateInvtId = Convert.ToInt16(elemList[i].Attributes[0].Value);
+                    int attrCount = elemList[i].Attributes.Count;
+                    for (int j = 0; j < attrCount; j++)
+                    {
+                        if (elemList[i].Attributes[j].Name == "iv_invtName")
+                        {
+                            it_updt_trainingName_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_invtLocation")
+                        {
+                            it_updt_trainingLocation_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_trainerName")
+                        {
+                            it_updt_trainerName_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_invtBatch")
+                        {
+                            it_updt_batch_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_invtFromDate")
+                        {
+                            it_updt_fromDate_dtp.Value = DateTime.Parse(elemList[i].Attributes[j].Value);
+                            it_updt_fromDate_txt.Text = makeShorterDate(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_invtToDate")
+                        {
+                            it_updt_toDate_dtp.Value = DateTime.Parse(elemList[i].Attributes[j].Value);
+                            it_updt_toDate_txt.Text = makeShorterDate(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_invtHours")
+                        {
+                            it_updt_trainingHours_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_attdCount")
+                        {
+                            it_updt_headCount_txt.Text = elemList[i].Attributes[j].Value;
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_venueCost")
+                        {
+                            it_updt_venueCost_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_trainerCost")
+                        {
+                            it_updt_trainerFees_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_trasportCost")
+                        {
+                            it_updt_transportCost_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_acmdCost")
+                        {
+                            it_updt_accomodation_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_miscCost")
+                        {
+                            it_updt_miscellaneous_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                        else if (elemList[i].Attributes[j].Name == "iv_totalCost")
+                        {
+                            it_updt_total_txt.Text = roundNumbersForString(elemList[i].Attributes[j].Value);
+                        }
+                    }
+                    it_updt_updatePanel_pan.Enabled = true;
+                    it_tab_main.SelectedIndex = 3;
+                    break;
+                }
+            }
+            //searchXML.
+
+            
         }
         /*------------------------------------------------------------  Form events end ---------------------------------------------------------------------*/
         
@@ -504,7 +585,28 @@ namespace form1
         
 
        /*--------------------------------------------------  Form Validation Functions start ---------------------------------------------------------------------*/
-
+        private string makeShorterDate(string str)
+        {
+            if (str.Trim() != "")
+            {
+                return DateTime.Parse(str).ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                return "";
+            }
+        }
+        private string roundNumbersForString(string str)
+        {
+            if (str.Trim() != "")
+            {
+                return Convert.ToString(Math.Round(Convert.ToDecimal(str)));
+            }
+            else
+            {
+                return "0";
+            }
+        }
         private Dictionary<string, string> searchType(bool all)
         {
             Dictionary<string, string> d;
@@ -1010,6 +1112,8 @@ namespace form1
                 it_res_records_dgv.Rows.Clear();
                 it_res_records_dgv.Refresh();
 
+                searchXML = doc;
+
                 XmlNodeList elemList = doc.GetElementsByTagName("Intervention");
                 int attrVal = 0;
                 for (int i = 0; i < elemList.Count; i++)
@@ -1018,13 +1122,23 @@ namespace form1
                     List<string> myCollection = new List<string>();
                     for (int j = 0; j < attrVal; j++)
                     {
+                        if (elemList[i].Attributes[j].Name == "iv_invtHours" 
+                            || elemList[i].Attributes[j].Name == "iv_venueCost" 
+                            || elemList[i].Attributes[j].Name == "iv_trainerCost"
+                            || elemList[i].Attributes[j].Name == "iv_trasportCost"
+                            || elemList[i].Attributes[j].Name == "iv_acmdCost"
+                            || elemList[i].Attributes[j].Name == "iv_miscCost"
+                            || elemList[i].Attributes[j].Name == "iv_totalCost")
+                            myCollection.Add(roundNumbersForString(elemList[i].Attributes[j].Value));
+                        else if (elemList[i].Attributes[j].Name == "iv_invtFromDate"
+                            || elemList[i].Attributes[j].Name == "iv_invtToDate")
+                            myCollection.Add(makeShorterDate(elemList[i].Attributes[j].Value));
+                        else
                             myCollection.Add(elemList[i].Attributes[j].Value);
                     }
                     it_res_records_dgv.Rows.Add(myCollection.ToArray());
                 }
-                it_tab_main.SelectedIndex = 2;
-                if(isFromSearch)
-                    isFromSearch = false;
+                it_tab_main.SelectedIndex = 2;        
             }
             catch (Exception ex)
             {
@@ -1032,18 +1146,6 @@ namespace form1
             }
         }
 
-        private void it_res_records_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        
-
-        
-
-        
-
-        
         /*------------------------------------------------------------  Form sql call end ---------------------------------------------------------------------*/
     }
 }
