@@ -45,7 +45,7 @@ namespace form1
 
         private void ManpowerTrackAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp_trck_add_frm ManpowerTrack_AddRec = new mp_trck_add_frm();
+            mp_tracker_frm ManpowerTrack_AddRec = new mp_tracker_frm();
             ManpowerTrack_AddRec.MdiParent = this;
             ManpowerTrack_AddRec.Show();
         }
@@ -82,14 +82,14 @@ namespace form1
 
         private void InterventionTrackAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp_trck_add_frm manpowerTracker = new mp_trck_add_frm();
+            mp_tracker_frm manpowerTracker = new mp_tracker_frm();
             manpowerTracker.MdiParent = this;
             manpowerTracker.Show();
         }
 
         private void billingTrackerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bil_trck_add_frm billingTracker = new bil_trck_add_frm();
+            bil_Trck_Add_frm billingTracker = new bil_Trck_Add_frm();
             billingTracker.MdiParent = this;
             billingTracker.Show();
         }

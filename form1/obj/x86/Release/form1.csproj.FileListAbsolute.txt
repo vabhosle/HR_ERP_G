@@ -51,7 +51,8 @@ C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Re
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.Splash.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.invt_trck_add_frm.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.main_Window.resources
-C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.mp_trck_add_frm.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.mp_trck_srch_frm.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.Properties.Resources.resources
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.csproj.GenerateResource.Cache
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.mp_tracker_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.bil_Trck_Srch_frm.resources

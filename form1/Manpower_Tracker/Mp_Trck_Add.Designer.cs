@@ -1,6 +1,6 @@
 ﻿namespace form1
 {
-    partial class mp_trck_add_frm
+    partial class mp_tracker_frm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,21 @@
             this.mt_tab_main = new System.Windows.Forms.TabControl();
             this.mt_tab_add = new System.Windows.Forms.TabPage();
             this.mt_add_addRecord_grb = new System.Windows.Forms.GroupBox();
+            this.mt_add_clear_btn = new System.Windows.Forms.Button();
+            this.mt_add_addRecord_dgv = new System.Windows.Forms.DataGridView();
+            this.mt_add_edpno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_function = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_reportingManager = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mt_add_dateOfJoining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mt_add_note_lbl = new System.Windows.Forms.Label();
             this.mt_add_addRecord_btn = new System.Windows.Forms.Button();
             this.mt_tab_search = new System.Windows.Forms.TabPage();
             this.mt_srch_searchRecord_grb = new System.Windows.Forms.GroupBox();
+            this.mt_srch_dojClear_btn = new System.Windows.Forms.Button();
+            this.mt_srch_dateOfJoining_dtp = new System.Windows.Forms.DateTimePicker();
             this.mt_srch_clear_bt = new System.Windows.Forms.Button();
             this.mt_srch_search_btn = new System.Windows.Forms.Button();
             this.mt_srch_edpNo_txt = new System.Windows.Forms.TextBox();
@@ -55,6 +66,13 @@
             this.mt_res_result_grb = new System.Windows.Forms.GroupBox();
             this.mt_res_clearSearch_btn = new System.Windows.Forms.Button();
             this.mt_res_result_gdv = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mt_tab_update = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.mt_updt_update_btn = new System.Windows.Forms.Button();
@@ -73,27 +91,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.mt_add_addRecord_dgv = new System.Windows.Forms.DataGridView();
-            this.mt_add_edpno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_function = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_reportingManager = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_add_dateOfJoining = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mt_srch_dateOfJoining_dtp = new System.Windows.Forms.DateTimePicker();
-            this.mt_srch_dojClear_btn = new System.Windows.Forms.Button();
-            this.mt_add_clear_btn = new System.Windows.Forms.Button();
             this.mt_tab_main.SuspendLayout();
             this.mt_tab_add.SuspendLayout();
             this.mt_add_addRecord_grb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mt_add_addRecord_dgv)).BeginInit();
             this.mt_tab_search.SuspendLayout();
             this.mt_srch_searchRecord_grb.SuspendLayout();
             this.mt_tab_result.SuspendLayout();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mt_res_result_gdv)).BeginInit();
             this.mt_tab_update.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mt_add_addRecord_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // mt_tab_main
@@ -142,6 +142,72 @@
             this.mt_add_addRecord_grb.TabIndex = 4;
             this.mt_add_addRecord_grb.TabStop = false;
             this.mt_add_addRecord_grb.Text = "Add Employee Record";
+            // 
+            // mt_add_clear_btn
+            // 
+            this.mt_add_clear_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mt_add_clear_btn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mt_add_clear_btn.Location = new System.Drawing.Point(1075, 537);
+            this.mt_add_clear_btn.Name = "mt_add_clear_btn";
+            this.mt_add_clear_btn.Size = new System.Drawing.Size(99, 39);
+            this.mt_add_clear_btn.TabIndex = 91;
+            this.mt_add_clear_btn.Text = "Clear";
+            this.mt_add_clear_btn.UseVisualStyleBackColor = false;
+            this.mt_add_clear_btn.Click += new System.EventHandler(this.mt_add_clear_btn_Click);
+            // 
+            // mt_add_addRecord_dgv
+            // 
+            this.mt_add_addRecord_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mt_add_addRecord_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mt_add_addRecord_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mt_add_edpno,
+            this.mt_add_name,
+            this.mt_add_grade,
+            this.mt_add_function,
+            this.mt_add_reportingManager,
+            this.mt_add_location,
+            this.mt_add_dateOfJoining});
+            this.mt_add_addRecord_dgv.Location = new System.Drawing.Point(6, 44);
+            this.mt_add_addRecord_dgv.Name = "mt_add_addRecord_dgv";
+            this.mt_add_addRecord_dgv.Size = new System.Drawing.Size(1168, 486);
+            this.mt_add_addRecord_dgv.TabIndex = 90;
+            this.mt_add_addRecord_dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.mt_add_addRecord_dgv_CellEndEdit);
+            this.mt_add_addRecord_dgv.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.mt_add_addRecord_dgv_EditingControlShowing);
+            // 
+            // mt_add_edpno
+            // 
+            this.mt_add_edpno.HeaderText = "EDP No";
+            this.mt_add_edpno.Name = "mt_add_edpno";
+            // 
+            // mt_add_name
+            // 
+            this.mt_add_name.HeaderText = "Name";
+            this.mt_add_name.Name = "mt_add_name";
+            // 
+            // mt_add_grade
+            // 
+            this.mt_add_grade.HeaderText = "Grade";
+            this.mt_add_grade.Name = "mt_add_grade";
+            // 
+            // mt_add_function
+            // 
+            this.mt_add_function.HeaderText = "Function";
+            this.mt_add_function.Name = "mt_add_function";
+            // 
+            // mt_add_reportingManager
+            // 
+            this.mt_add_reportingManager.HeaderText = "Reporting Manager";
+            this.mt_add_reportingManager.Name = "mt_add_reportingManager";
+            // 
+            // mt_add_location
+            // 
+            this.mt_add_location.HeaderText = "Location";
+            this.mt_add_location.Name = "mt_add_location";
+            // 
+            // mt_add_dateOfJoining
+            // 
+            this.mt_add_dateOfJoining.HeaderText = "Date of Joining";
+            this.mt_add_dateOfJoining.Name = "mt_add_dateOfJoining";
             // 
             // mt_add_note_lbl
             // 
@@ -206,6 +272,25 @@
             this.mt_srch_searchRecord_grb.TabIndex = 32;
             this.mt_srch_searchRecord_grb.TabStop = false;
             this.mt_srch_searchRecord_grb.Text = "Search Employee Record";
+            // 
+            // mt_srch_dojClear_btn
+            // 
+            this.mt_srch_dojClear_btn.BackColor = System.Drawing.SystemColors.Window;
+            this.mt_srch_dojClear_btn.Location = new System.Drawing.Point(877, 25);
+            this.mt_srch_dojClear_btn.Name = "mt_srch_dojClear_btn";
+            this.mt_srch_dojClear_btn.Size = new System.Drawing.Size(23, 23);
+            this.mt_srch_dojClear_btn.TabIndex = 32;
+            this.mt_srch_dojClear_btn.Text = "X";
+            this.mt_srch_dojClear_btn.UseVisualStyleBackColor = false;
+            this.mt_srch_dojClear_btn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mt_srch_dateOfJoining_dtp
+            // 
+            this.mt_srch_dateOfJoining_dtp.Location = new System.Drawing.Point(862, 26);
+            this.mt_srch_dateOfJoining_dtp.Name = "mt_srch_dateOfJoining_dtp";
+            this.mt_srch_dateOfJoining_dtp.Size = new System.Drawing.Size(16, 22);
+            this.mt_srch_dateOfJoining_dtp.TabIndex = 31;
+            this.mt_srch_dateOfJoining_dtp.ValueChanged += new System.EventHandler(this.mt_srch_dateOfJoining_dtp_ValueChanged);
             // 
             // mt_srch_clear_bt
             // 
@@ -399,6 +484,57 @@
             this.mt_res_result_gdv.Size = new System.Drawing.Size(1172, 506);
             this.mt_res_result_gdv.TabIndex = 4;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "mt_srch_edpno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "EDP No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "mt_srch_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "mt_srch_grade";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Grade";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "mt_srch_function";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Function";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "mt_srch_reportingManager";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Reporting Manager";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "mt_srch_location";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Location";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "mt_srch_dateOfJoining";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date of Joining";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // mt_tab_update
             // 
             this.mt_tab_update.Controls.Add(this.groupBox3);
@@ -577,156 +713,21 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "EDP No.";
             // 
-            // mt_add_addRecord_dgv
-            // 
-            this.mt_add_addRecord_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.mt_add_addRecord_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mt_add_addRecord_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mt_add_edpno,
-            this.mt_add_name,
-            this.mt_add_grade,
-            this.mt_add_function,
-            this.mt_add_reportingManager,
-            this.mt_add_location,
-            this.mt_add_dateOfJoining});
-            this.mt_add_addRecord_dgv.Location = new System.Drawing.Point(6, 44);
-            this.mt_add_addRecord_dgv.Name = "mt_add_addRecord_dgv";
-            this.mt_add_addRecord_dgv.Size = new System.Drawing.Size(1168, 486);
-            this.mt_add_addRecord_dgv.TabIndex = 90;
-            this.mt_add_addRecord_dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.mt_add_addRecord_dgv_CellEndEdit);
-            this.mt_add_addRecord_dgv.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.mt_add_addRecord_dgv_EditingControlShowing);
-            // 
-            // mt_add_edpno
-            // 
-            this.mt_add_edpno.HeaderText = "EDP No";
-            this.mt_add_edpno.Name = "mt_add_edpno";
-            // 
-            // mt_add_name
-            // 
-            this.mt_add_name.HeaderText = "Name";
-            this.mt_add_name.Name = "mt_add_name";
-            // 
-            // mt_add_grade
-            // 
-            this.mt_add_grade.HeaderText = "Grade";
-            this.mt_add_grade.Name = "mt_add_grade";
-            // 
-            // mt_add_function
-            // 
-            this.mt_add_function.HeaderText = "Function";
-            this.mt_add_function.Name = "mt_add_function";
-            // 
-            // mt_add_reportingManager
-            // 
-            this.mt_add_reportingManager.HeaderText = "Reporting Manager";
-            this.mt_add_reportingManager.Name = "mt_add_reportingManager";
-            // 
-            // mt_add_location
-            // 
-            this.mt_add_location.HeaderText = "Location";
-            this.mt_add_location.Name = "mt_add_location";
-            // 
-            // mt_add_dateOfJoining
-            // 
-            this.mt_add_dateOfJoining.HeaderText = "Date of Joining";
-            this.mt_add_dateOfJoining.Name = "mt_add_dateOfJoining";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "mt_srch_edpno";
-            this.dataGridViewTextBoxColumn1.HeaderText = "EDP No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "mt_srch_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "mt_srch_grade";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Grade";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "mt_srch_function";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Function";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "mt_srch_reportingManager";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Reporting Manager";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "mt_srch_location";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Location";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "mt_srch_dateOfJoining";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date of Joining";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // mt_srch_dateOfJoining_dtp
-            // 
-            this.mt_srch_dateOfJoining_dtp.Location = new System.Drawing.Point(862, 26);
-            this.mt_srch_dateOfJoining_dtp.Name = "mt_srch_dateOfJoining_dtp";
-            this.mt_srch_dateOfJoining_dtp.Size = new System.Drawing.Size(16, 22);
-            this.mt_srch_dateOfJoining_dtp.TabIndex = 31;
-            this.mt_srch_dateOfJoining_dtp.ValueChanged += new System.EventHandler(this.mt_srch_dateOfJoining_dtp_ValueChanged);
-            // 
-            // mt_srch_dojClear_btn
-            // 
-            this.mt_srch_dojClear_btn.BackColor = System.Drawing.SystemColors.Window;
-            this.mt_srch_dojClear_btn.Location = new System.Drawing.Point(877, 25);
-            this.mt_srch_dojClear_btn.Name = "mt_srch_dojClear_btn";
-            this.mt_srch_dojClear_btn.Size = new System.Drawing.Size(23, 23);
-            this.mt_srch_dojClear_btn.TabIndex = 32;
-            this.mt_srch_dojClear_btn.Text = "X";
-            this.mt_srch_dojClear_btn.UseVisualStyleBackColor = false;
-            this.mt_srch_dojClear_btn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mt_add_clear_btn
-            // 
-            this.mt_add_clear_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mt_add_clear_btn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mt_add_clear_btn.Location = new System.Drawing.Point(1075, 537);
-            this.mt_add_clear_btn.Name = "mt_add_clear_btn";
-            this.mt_add_clear_btn.Size = new System.Drawing.Size(99, 39);
-            this.mt_add_clear_btn.TabIndex = 91;
-            this.mt_add_clear_btn.Text = "Clear";
-            this.mt_add_clear_btn.UseVisualStyleBackColor = false;
-            this.mt_add_clear_btn.Click += new System.EventHandler(this.mt_add_clear_btn_Click);
-            // 
-            // mp_trck_add_frm
+            // mp_tracker_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1214, 637);
             this.Controls.Add(this.mt_tab_main);
-            this.Name = "mp_trck_add_frm";
+            this.Name = "mp_tracker_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manpower Tracker";
             this.mt_tab_main.ResumeLayout(false);
             this.mt_tab_add.ResumeLayout(false);
             this.mt_add_addRecord_grb.ResumeLayout(false);
             this.mt_add_addRecord_grb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mt_add_addRecord_dgv)).EndInit();
             this.mt_tab_search.ResumeLayout(false);
             this.mt_srch_searchRecord_grb.ResumeLayout(false);
             this.mt_srch_searchRecord_grb.PerformLayout();
@@ -736,7 +737,6 @@
             this.mt_tab_update.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mt_add_addRecord_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }

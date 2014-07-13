@@ -62,10 +62,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billing_Tracker\Bill_Trck_Srch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing_Tracker\Bill_Trck_Srch.designer.cs">
+      <DependentUpon>Bill_Trck_Srch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Billing_Tracker\Bill_Trck_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Billing_Tracker\Bill_Trck_Add.designer.cs">
+    <Compile Include="Billing_Tracker\Bill_Trck_Add.Designer.cs">
       <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="connection.cs" />
@@ -116,6 +122,9 @@
     <Compile Include="xmlMaker.cs" />
     <EmbeddedResource Include="Billing_Tracker\Bill_Trck_Add.resx">
       <DependentUpon>Bill_Trck_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing_Tracker\Bill_Trck_Srch.resx">
+      <DependentUpon>Bill_Trck_Srch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Intervantion_Tracker\Invt_Trck_Srch.resx">
       <DependentUpon>Invt_Trck_Srch.cs</DependentUpon>

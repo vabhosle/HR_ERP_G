@@ -10,9 +10,9 @@ using System.Xml;
 
 namespace form1
 {
-    public partial class mp_trck_add_frm : Form
+    public partial class mp_tracker_frm : Form
     {
-        public mp_trck_add_frm()
+        public mp_tracker_frm()
         {
             InitializeComponent();
         }
