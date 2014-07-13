@@ -36,3 +36,22 @@ C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86
 C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HR_Erp_g\form1\obj\x86\Release\form1.invt_trck_srch_frm.resources
 C:\Users\VaibhaV Bhosle\Documents\Visual Studio 2010\Projects\Godrej\form1\obj\x86\Release\form1.bil_trck_add_frm.resources
 C:\Users\VaibhaV Bhosle\Documents\Visual Studio 2010\Projects\Godrej\form1\obj\x86\Release\form1.mp_trck_add_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\bin\Release\form1.exe.config
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\Interop.Microsoft.Office.Core.dll
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\Interop.VBIDE.dll
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.csproj.ResolveComReference.cache
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.exe
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.pdb
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\bin\Release\form1.exe
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\bin\Release\form1.pdb
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.csprojResolveAssemblyReference.cache
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.bil_trck_add_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.invt_trck_srch_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.Splash.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.invt_trck_add_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.main_Window.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.mp_trck_add_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.mp_trck_srch_frm.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.Properties.Resources.resources
+C:\Users\PRATHAMESH\Documents\Visual Studio 2010\Projects\HrErp\form1\obj\x86\Release\form1.csproj.GenerateResource.Cache
