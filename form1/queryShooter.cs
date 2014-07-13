@@ -279,7 +279,22 @@ class queryShooter
         return doc;
 
     }
+    public XmlDocument invt_mp_srach_invt_add(int invtId)
+    {
+        SqlCon = createConnection();
+        sqlCmd = new SqlCommand("EXEC [dbo].[usp_hr_manpower_select_on_invt] @invt_invtNo=@INVTNO", SqlCon);
 
+        sqlCmd.Parameters.Add("@INVTNO", SqlDbType.Int); sqlCmd.Parameters["@INVTNO"].Value = Convert.ToInt32(invtId);
+
+        dr = sqlCmd.ExecuteReader();
+        while (dr.Read())
+        {
+            string XMLStr = dr[0].ToString();
+            doc.LoadXml(XMLStr);
+        }
+        destroyConnection(SqlCon);
+        return doc;
+    }
     private SqlConnection createConnection()
     {
         try

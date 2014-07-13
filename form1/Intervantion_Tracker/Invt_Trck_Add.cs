@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
-
+using System.Threading;
 namespace form1
 {
     public partial class invt_trck_add_frm : Form
@@ -34,7 +34,7 @@ namespace form1
             //myTabPage.Name = "tab_Update";
             //it_tab_main.TabPages.Add(myTabPage);
 
-
+            
 
             //it_tab_main.SuspendLayout();
 
@@ -504,7 +504,7 @@ namespace form1
 
             for (int i = 0; i < elemList.Count; i++)
             {
-                if (elemList[i].Attributes[0].Value == it_res_records_dgv.Rows[e.RowIndex].Cells["iv_invtNo"].Value)
+                if (Convert.ToInt16(elemList[i].Attributes[0].Value) ==  Convert.ToInt16(it_res_records_dgv.Rows[e.RowIndex].Cells["iv_invtNo"].Value))
                 {
                     updateInvtId = Convert.ToInt16(elemList[i].Attributes[0].Value);
                     int attrCount = elemList[i].Attributes.Count;
@@ -570,6 +570,10 @@ namespace form1
                         }
                     }
                     it_updt_updatePanel_pan.Enabled = true;
+
+
+                    getParticipantsForUpdate(Convert.ToInt16(elemList[i].Attributes[0].Value));
+
                     it_tab_main.SelectedIndex = 3;
                     break;
                 }
@@ -1100,6 +1104,21 @@ namespace form1
                 showAlert("*Please add atleast one participant.",false);
             }
             
+        }
+        private void getParticipantsForUpdate(int invtNo)
+        {
+            try
+            {
+                queryShooter query = new queryShooter();
+                XmlDocument doc = new XmlDocument();
+                doc = query.invt_mp_srach_invt_add(invtNo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Oops! Something went wrong.");
+            }
+           
+
         }
         private void searchInterventions(Dictionary<string,string> d)
         {
