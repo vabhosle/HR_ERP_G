@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace form1
 {
@@ -16,55 +17,154 @@ namespace form1
             InitializeComponent();
         }
 
-        private void Manpower_Tracker_Add_Record_Load(object sender, EventArgs e)
+        private void mt_add_addRecord_dgv_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void mp_add_dgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            try
+            if (e.ColumnIndex == 0)
             {
-                e.Control.KeyPress += new KeyPressEventHandler(Control_KeyPress);
+                string edpNo = (Convert.ToString(mt_add_addRecord_dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == "") ? "0" : mt_add_addRecord_dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                if (checkForDuplicateRecord(edpNo, e.RowIndex))
+                {
+                    if (edpNo == "0")
+                    {
+                        showAlert("*Please enter EDP No.", false);
+                    }
+                    else
+                    {
+                        removeAlert();
+                    }
+                }
+                else
+                {
+                    showAlert("*Employee record already added.", false);
+                    removeDataGridRow(mt_add_addRecord_dgv.Rows[e.RowIndex]);
+                }
             }
-            catch { }
+            else
+            {
+                removeAlert();
+            }
+        }
+// ---------------------------------------- Validating Functions ---------------------------------------------------
+
+        private bool checkForDuplicateRecord(string edpno, int existing)
+        {
+            int edp = Convert.ToInt32(edpno);
+
+            for (int i = 0; i < mt_add_addRecord_dgv.Rows.Count - 1; i++)
+            {
+                DataGridViewRow row = mt_add_addRecord_dgv.Rows[i];
+                if (Convert.ToInt32((Convert.ToString(row.Cells["mt_add_edpno"].Value).Trim() == "") ? "-1" : row.Cells["mt_add_edpno"].Value) == edp && existing != i)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
+        private void showAlert(string msg, bool isCorr)
+        {
+            mt_add_note_lbl.Text = msg;
+            mt_add_note_lbl.ForeColor = (isCorr) ? System.Drawing.Color.Green : System.Drawing.Color.Red;
+        }
+
+        private void removeAlert()
+        {
+            mt_add_note_lbl.Text = "";
+            mt_add_note_lbl.ForeColor = System.Drawing.Color.Blue;
+        }
+
+        private void removeDataGridRow(DataGridViewRow row)
+        {
+            row.Cells["mt_add_edpno"].Value = "";
+            row.Cells["mt_add_name"].Value = "";
+            row.Cells["mt_add_grade"].Value = "";
+            row.Cells["mt_add_function"].Value = "";
+            row.Cells["mt_add_location"].Value = "";
+            row.Cells["mt_add_reportingManager"].Value = "";
+            row.Cells["mt_add_dateOfJoining"].Value = "";
+        }
+
+        private bool numberValidation(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                return true;
+            }
+            return false;
+        }
+// ------------------- Validation for only number in edp No ----------------------------
         private void Control_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int i = 0, j=1;
-            if (mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 0)
+            if (mt_add_addRecord_dgv.CurrentCell.ColumnIndex == 0)
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 {
                     e.Handled = true;
                 }
-
-                // only allow one decimal point
-                if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
-                {
-                    e.Handled = true;
-                }
-            }
-
-            if (mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 1 || mt_add_addRecord_gdv.CurrentCell.ColumnIndex == 4)
-            {
-                int ascii = Convert.ToInt16(e.KeyChar);
-
-                if ((ascii >= 97 && ascii <= 122) || (ascii >= 65 && ascii <= 90) || (ascii == 8) || (ascii == 32))
+                else
                 {
                     e.Handled = false;
                 }
-                else
-                {
-                    e.Handled = true;
-                }
             }
         }
 
-        private void mt_add_addRecord_grb_Enter(object sender, EventArgs e)
+        private void mt_add_addRecord_dgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-
+            try
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.ContextMenuStrip = new ContextMenuStrip();
+                    tb.KeyDown -= TextBox_KeyDown;
+                    tb.KeyDown += TextBox_KeyDown;
+                }
+                e.Control.KeyPress += new KeyPressEventHandler(Control_KeyPress);
+            }
+            catch { }
         }
+        void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C | e.KeyCode == Keys.V))
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        
+// ----------------------------------------- End of edp no validation ------------------------------        
+
+        private void mt_srch_edpNo_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = numberValidation(e);
+        }
+
+        private void mt_srch_dateOfJoining_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            mt_srch_dateOfJoining_txt.Text = mt_srch_dateOfJoining_dtp.Value.ToString("yyyy-MM-dd");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //invt_couDtTo_add_dtp.Value = DateTime.Today;
+            mt_srch_dateOfJoining_txt.Text = "";
+        }
+
+        private void mt_srch_clear_bt_Click(object sender, EventArgs e)
+        {
+            mt_srch_edpNo_txt.Text = "";
+            mt_srch_grade_txt.Text = "";
+            mt_srch_function_txt.Text = "";
+            mt_srch_location_txt.Text = "";
+            mt_srch_name_txt.Text = "";
+            mt_srch_dateOfJoining_txt.Text = "";
+            mt_srch_reportingManager_txt.Text = "";
+        }
+
+        private void mt_add_clear_btn_Click(object sender, EventArgs e)
+        {
+            mt_add_addRecord_dgv.Rows.Clear();
+        }
+        
     }
 }
